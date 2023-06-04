@@ -6,5 +6,4 @@ interface Character {
 
 interface CharacterDetail extends Character {
   films: string[];
-  sourceUrl: string;
 }

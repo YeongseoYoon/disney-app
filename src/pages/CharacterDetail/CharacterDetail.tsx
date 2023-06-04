@@ -9,20 +9,31 @@ const CharacterDetailWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
 `;
 
 const CharacterFilmWrapper = styled.div`
-  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
 const CharacterFilm = styled.div`
-  display: inline;
+  display: inline-block;
   background-color: white;
   color: black;
   border-radius: 5px;
+  padding: 3px;
+  margin: 10px;
 `;
 
-const Img = styled.img`
+const CharacterTitle = styled.h1`
+  font-size: 30px;
+  margin: 20px 0px;
+`;
+
+const CharacterImg = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -37,8 +48,8 @@ function CharacterDetail() {
 
   return (
     <CharacterDetailWrapper>
-      <Img src={character?.imageUrl} />
-      <h1>{character?.name}'s Films</h1>
+      <CharacterImg src={character?.imageUrl} />
+      <CharacterTitle>{character?.name}'s Films'</CharacterTitle>
       <CharacterFilmWrapper>
         {character?.films?.map((film) => (
           <CharacterFilm key={`${character.id}-${film}`}>{film}</CharacterFilm>
