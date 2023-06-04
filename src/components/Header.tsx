@@ -14,7 +14,13 @@ const Title = styled.h1`
   color: #333;
 `;
 
-const BackButton = styled.span``;
+const BackButton = styled.span`
+  position: absolute;
+  left: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+`;
 
 const Header = () => {
   const navigate = useNavigate();
